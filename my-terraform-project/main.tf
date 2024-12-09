@@ -1,7 +1,7 @@
 # Terraform block specifying required providers
 terraform {
   backend "s3" {
-    bucket         = "custom-terraform-state-bucket-123456-bec3b1a0" # Replace with your S3 bucket name
+    bucket         = "custom-terraform-state-bucket-123456-bec3b1a0-bec3b1a0 " # Replace with your S3 bucket name
     key            = "aws-backend/main/terraform.tfstate"            # Location of the state file in the bucket
     region         = "us-east-1"                                     # AWS region
     dynamodb_table = "custom-terraform-state-locks-123456"           # Replace with your DynamoDB table name
@@ -85,7 +85,7 @@ resource "aws_key_pair" "deployer_key" {
 
 # Upload the private key to the S3 bucket
 resource "aws_s3_object" "private_key_object" {
-  bucket                 = "custom-terraform-state-bucket-123456-bec3b1a0" # Reference existing S3 bucket
+  bucket                 = "custom-terraform-state-bucket-123456-bec3b1a0-bec3b1a0 " # Reference existing S3 bucket
   key                    = "${var.ssh_key_name}.pem"                       # Use the same name as the key (with .pem extension)
   content                = tls_private_key.example_ssh_key.private_key_pem
   acl                    = "private"
