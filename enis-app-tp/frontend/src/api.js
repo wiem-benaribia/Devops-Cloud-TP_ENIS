@@ -3,9 +3,9 @@ import { ACCESS_TOKEN } from "./constants";
 import { API_BASE_URL } from './config';
 const apiUrl = "http";
 
-const api = axios.create({
-  baseURL: API_BASE_URL
-});
+const api1  = axios.create({  
+  baseURL: "http://184.73.55.93:8008"  
+});  
 
 api.interceptors.request.use(
   (config) => {

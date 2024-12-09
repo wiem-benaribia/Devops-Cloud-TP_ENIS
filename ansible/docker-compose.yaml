@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   backend-app:
-    image: 273354637191.dkr.ecr.us-east-1.amazonaws.com/enis-app:backend-app-1.0 # Use the already pulled image
-    container_name: backend-app
+    image: 302263057883.dkr.ecr.us-east-1.amazonaws.com/enis-app:backend-1.0 # Use the already pulled image
+    container_name: backend
     restart: always
     ports:
       - "8000:8000"
@@ -15,8 +15,8 @@ services:
       retries: 5
 
   frontend-app:
-    image: 273354637191.dkr.ecr.us-east-1.amazonaws.com/enis-app:frontend-app-1.0 # Use the already built image
-    container_name: frontend-app
+    image: 302263057883.dkr.ecr.us-east-1.amazonaws.com/enis-app:frontend-1.0 # Use the already built image
+    container_name: frontend
     restart: always
     ports:
       - "81:80"

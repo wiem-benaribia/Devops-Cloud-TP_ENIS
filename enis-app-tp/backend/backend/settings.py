@@ -107,7 +107,7 @@ DATABASES = {
         'NAME': 'enis_tp',
         'USER': 'dbuser',
         'PASSWORD': 'DBpassword2024',
-        'HOST': DB_HOST,
+        'HOST': 'mydb.cbceweoueo8e.us-east-1.rds.amazonaws.com',
         'PORT': 3306,
     }
 }
